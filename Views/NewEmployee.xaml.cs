@@ -53,6 +53,11 @@ namespace Employee_Directory_WPF
                 Close();
             }
         }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
 

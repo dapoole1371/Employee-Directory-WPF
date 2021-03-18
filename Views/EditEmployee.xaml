@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Employee_Directory_WPF.Views"
         xmlns:Models="clr-namespace:Employee_Directory_WPF.Models" x:Class="Employee_Directory_WPF.Views.EditEmployee"
-        mc:Ignorable="d" FontSize="18" FontFamily="Segoe UI Light"
-        Title="Add a New Employee" Height="360" Width="450" Background="Azure" >
+        mc:Ignorable="d" FontSize="18"
+        Title="Add a New Employee" Height="290" Width="450">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0.252"/>
+            <GradientStop Color="#FF5782B6" Offset="0.687"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
@@ -27,27 +33,56 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="32" 
-                   Text="Edit Employee Information" TextAlignment="Center" Grid.ColumnSpan="3" 
-                   Margin="0 0 0 10"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Impact"
+                   TextAlignment="Center" Grid.ColumnSpan="3" 
+                   Margin="0 0 0 10" Foreground="#FFBBBBBB"
+                   Text="Edit Employee Information"/>
 
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="Select Employee:"/>
-        <ComboBox x:Name="EmployeeNames" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" SelectionChanged="EmployeeNames_SelectionChanged" ItemsSource="{Binding Employee_Directory_EditEmployee.employees}" DisplayMemberPath="FullName" SelectedValuePath="FullName" SelectedValue="{Binding Employee_Directory_EditEmployee.employees.ID}">
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Select Employee:"
+                   Margin="0 5 5 5" Foreground="#FFA8A8A8" FontWeight="Normal" FontFamily="Bahnschrift"/>
+        <ComboBox x:Name="EmployeeNames" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2"
+
+                  SelectionChanged="EmployeeNames_SelectionChanged" 
+                  ItemsSource="{Binding Employee_Directory_EditEmployee.employees}" 
+                  DisplayMemberPath="FullName" SelectedValuePath="FullName" 
+                  SelectedValue="{Binding Employee_Directory_EditEmployee.employees.ID}">
 
         </ComboBox>
-        <TextBlock Grid.Column="1" Grid.Row="3" FontSize="19" Text="New First Name:" Margin="0 5 0 10"/>
-        <TextBox Grid.Column="3" Grid.Row="3" Margin="10 0 0 0" Height="30" x:Name="FirstNameIn"/>
+        <TextBlock Grid.Column="1" Grid.Row="3" FontSize="18" Text="New First Name:"
+                   Margin="0 5 0 5" Foreground="#FFA8A8A8" FontWeight="Normal" FontFamily="Bahnschrift"/>
+        <TextBox Grid.Column="3" Grid.Row="3" Height="25" x:Name="FirstNameIn"/>
 
-        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="19" Text="New Last Name:" Margin="0 10 0 10"/>
-        <TextBox Grid.Column="3" Grid.Row="4" Margin="10 5 0 0" Height="30" x:Name="LastNameIn"/>
+        <TextBlock Grid.Column="1" Grid.Row="4" FontSize="18" Text="New Last Name:"
+                   Margin="0 5 0 5" Foreground="#FFA8A8A8" FontWeight="Normal" FontFamily="Bahnschrift"/>
+        <TextBox Grid.Column="3" Grid.Row="4" Height="25" x:Name="LastNameIn"/>
 
-        <TextBlock Grid.Column="1" Grid.Row="5" FontSize="19" Text="New Job Title:" Margin="0 10 0 10"/>
-        <TextBox Grid.Column="3" Grid.Row="5" Margin="10 5 0 0" Height="30" x:Name="JobTitleIn"/>
+        <TextBlock Grid.Column="1" Grid.Row="5" FontSize="18" Text="New Job Title:"
+                   Margin="0 5 0 5" Foreground="#FFA8A8A8" FontWeight="Normal" FontFamily="Bahnschrift"/>
+        <TextBox Grid.Column="3" Grid.Row="5" Height="25" x:Name="JobTitleIn"/>
 
         <Button x:Name="EditButton" Grid.Column="3" Grid.Row="6" Click="EditButton_Click" Width="150" Height="30"
-                Content="Submit Changes" HorizontalAlignment="Right"/>
-
+                FontFamily="Bahnschrift" Padding="2  1 2 1"
+                BorderBrush="Black" Background="#FFC7C7C7" 
+                FontWeight="Bold" BorderThickness="2,2,2,2"
+                Content="Submit Changes" HorizontalAlignment="Right">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
         <Button x:Name="CancelButton" Grid.Column="1" Grid.Row="6" Width="75" Height="30"
-                Content="Cancel" Click="CancelButton_Click"/>
+                FontFamily="Bahnschrift" Padding="2  1 2 1"
+                BorderBrush="Black" Background="#FFC7C7C7" 
+                FontWeight="Bold" BorderThickness="2,2,2,2"
+                Content="Cancel" Click="CancelButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Right"
+                   Text="Created by Dave Poole, 2021" FontSize="12"/>
     </Grid>
 </Window>
