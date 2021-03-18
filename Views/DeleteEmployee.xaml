@@ -42,7 +42,7 @@
                   HorizontalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="3"
                   
                   ItemsSource="{Binding Employee_Directory_EditEmployee.employees}"
-                  DisplayMemberPath="FullName" SelectedValuePath="FullName"
+                  DisplayMemberPath="EmployeeDetails" SelectedValuePath="EmployeeDetails"
                   SelectedValue="{Binding Employee_Directory_EditEmployee.employees.ID}" SelectionChanged="EmployeeNames_SelectionChanged">
 
         </ComboBox>

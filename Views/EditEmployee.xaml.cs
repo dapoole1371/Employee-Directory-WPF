@@ -77,6 +77,7 @@ namespace Employee_Directory_WPF.Views
                     SqliteDataAccess.EditEmployee(employee);  //Open connection string to database and modify employee data where ID matches the selected employee from the dropdown menu.
                     MessageBox.Show($"{employee.FullName} has been edited successfully!");
                     Close();
+                    Owner.Activate();
                 }
             }
             items.Errors.Clear();
@@ -84,6 +85,7 @@ namespace Employee_Directory_WPF.Views
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
+            Owner.Activate();
         }
     }
 }

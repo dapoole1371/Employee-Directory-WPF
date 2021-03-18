@@ -51,12 +51,14 @@ namespace Employee_Directory_WPF
                 SqliteDataAccess.NewEmployee(emp);
                 MessageBox.Show($"{emp.FullName} has been added\nto your directory!");
                 Close();
+                Owner.Activate();
             }
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
             Close();
+            Owner.Activate();
         }
     }
 }
