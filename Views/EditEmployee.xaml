@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Employee_Directory_WPF.Views"
         xmlns:Models="clr-namespace:Employee_Directory_WPF.Models" x:Class="Employee_Directory_WPF.Views.EditEmployee"
         mc:Ignorable="d" FontSize="18"
-        Title="Add a New Employee" Height="290" Width="450">
+        Title="Add a New Employee" Height="310" Width="480" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0.252"/>
@@ -83,6 +83,6 @@
             </Button.Resources>
         </Button>
         <TextBlock Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Right"
-                   Text="Created by Dave Poole, 2021" FontSize="12"/>
+                   Text="Created by Dave Poole, 2021" FontSize="12" FontWeight="Normal" FontFamily="Century"/>
     </Grid>
 </Window>

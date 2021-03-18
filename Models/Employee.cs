@@ -22,5 +22,13 @@ namespace Employee_Directory_WPF.Models
                 return FirstName + " " + LastName;
             }
         }
+
+        public string EmployeeDetails
+        {
+            get
+            {
+                return FullName + " " + JobTitle;
+            }
+        }
     }
 }
