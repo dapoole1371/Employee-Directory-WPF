@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Employee_Directory_WPF.Views"
         mc:Ignorable="d" FontSize="18"
-        Title="Delete Employee" Height="260" Width="450">
+        Title="Delete Employee" Height="260" Width="450" ResizeMode="NoResize" WindowStartupLocation="CenterOwner">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0.252"/>
@@ -62,7 +62,7 @@
         <Button x:Name="Cancel" Content="Cancel" Grid.Column="1"  Grid.Row="4"
                 Margin="65 0 0 0" Width="80" Height="30"  Padding="2  1 2 1"
                 BorderBrush="Black" Background="#FFC7C7C7" 
-                FontWeight="Bold" BorderThickness="2,2,2,2" FontFamily="Century" >
+                FontWeight="Bold" BorderThickness="2,2,2,2" FontFamily="Century" Click="Cancel_Click" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
@@ -70,6 +70,6 @@
             </Button.Resources>
         </Button>
         <TextBlock Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2" HorizontalAlignment="Right"
-                   Text="Created by Dave Poole, 2021" FontSize="12"/>
+                   Text="Created by Dave Poole, 2021" FontSize="12" FontWeight="Normal" FontFamily="Century"/>
     </Grid>
 </Window>

@@ -58,7 +58,7 @@ namespace Employee_Directory_WPF.Views
             //errors.Clear();
             if (results.IsValid == true) //Sends confirmation message to user prior to deleting Employee from database.  
             {
-                MessageBoxResult result = MessageBox.Show(this,$"Are you sure you want to delete {employee.FullName}? \nWARNING, THIS ACTION CANNOT BE UNDONE", "Confirm Delete", MessageBoxButton.YesNo);
+                MessageBoxResult result = MessageBox.Show(this,$"Are you sure you want to delete {employee.FullName}? \nWARNING, THIS ACTION CANNOT BE UNDONE", "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                     switch (result)
                     {
                         case MessageBoxResult.Yes:
@@ -71,7 +71,12 @@ namespace Employee_Directory_WPF.Views
                             break;
                     }
             }
+            results.Errors.Clear();
+        }
 
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        { 
+            Close();
         }
     }
 }

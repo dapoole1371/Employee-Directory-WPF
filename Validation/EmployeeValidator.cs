@@ -34,6 +34,7 @@ namespace Employee_Directory_WPF.Validation
                 .Must(IsValidJob).WithMessage("{PropertyName} cannot contain special characters.");
         }
 
+        
         //Method to check validity of a user input for first and last name
         protected bool IsValidName(string name)
         {
@@ -47,6 +48,15 @@ namespace Employee_Directory_WPF.Validation
             jobTitle = jobTitle.Replace(" ", "");
             jobTitle = jobTitle.Replace("-", "");
             return jobTitle.All(Char.IsLetterOrDigit);
+        }
+    }
+
+    public class EmployeeExists : AbstractValidator<Employee>
+    {
+        public EmployeeExists()
+        {
+            RuleFor(e => e.ID)
+                .NotEmpty();
         }
     }
 }

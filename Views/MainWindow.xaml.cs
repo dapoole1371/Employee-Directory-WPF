@@ -35,24 +35,28 @@ namespace Employee_Directory_WPF
         private void NewEmployee_Click(object sender, RoutedEventArgs e)
         {
             NewEmployee newEmployee = new NewEmployee();
+            newEmployee.Owner = this;
             newEmployee.Show();
         }
 
         private void DisplayList_Click(object sender, RoutedEventArgs e)
         {
             EmployeeList employees = new EmployeeList();
+            employees.Owner = this;
             employees.Show();
         }
 
         private void EditEmployee_Click(object sender, RoutedEventArgs e)
         {
             EditEmployee editEmployee = new EditEmployee();
+            editEmployee.Owner = this;
             editEmployee.Show();
         }
 
         private void DeleteEmployee_Click(object sender, RoutedEventArgs e)
         {
             DeleteEmployee deleteEmployee = new DeleteEmployee();
+            deleteEmployee.Owner = this;
             deleteEmployee.Show();
         }
     }

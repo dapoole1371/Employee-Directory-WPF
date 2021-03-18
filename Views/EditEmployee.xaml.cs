@@ -36,15 +36,15 @@ namespace Employee_Directory_WPF.Views
 
         private void EditButton_Click(object sender, RoutedEventArgs e)  //When user clicks Edit button
         {
-            EmployeeValidator validator = new EmployeeValidator();
+            EmployeeExists exists = new EmployeeExists();
             
             //Check to see if an employee has been selected from the dropdown menu to edit
-            var results = validator.Validate(employee);
-            if (results.IsValid == false)  //Code when no employee has been selected
+            var items = exists.Validate(employee);
+            if (items.IsValid == false)  //Code when no employee has been selected
             {
                 string messageBox = "";
                 int count = 0;
-                foreach (ValidationFailure failure in results.Errors)
+                foreach (ValidationFailure failure in items.Errors)
                 {
                     count++;
                 }
@@ -55,12 +55,13 @@ namespace Employee_Directory_WPF.Views
                 }
             }
 
-            if (results.IsValid == true) //If employee selected, replaces all properties of the temporary employee with the user inputs from the text boxes.
+            if (items.IsValid == true) //If employee selected, replaces all properties of the temporary employee with the user inputs from the text boxes.
             {
+                EmployeeValidator validator = new EmployeeValidator();
                 employee.FirstName = FirstNameIn.Text;
                 employee.LastName = LastNameIn.Text;
                 employee.JobTitle = JobTitleIn.Text;
-                results = validator.Validate(employee);
+                var results = validator.Validate(employee);
                 if (results.IsValid == false)
                 {
                     string messageBox = "";
@@ -78,6 +79,7 @@ namespace Employee_Directory_WPF.Views
                     Close();
                 }
             }
+            items.Errors.Clear();
         }
         private void CancelButton_Click(object sender, RoutedEventArgs e)
         {

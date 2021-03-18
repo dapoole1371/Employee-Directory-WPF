@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Employee_Directory_WPF"
         mc:Ignorable="d" FontSize="18"
-        Title="Employee Directory" Height="370" Width="400" HorizontalAlignment="Center" Foreground="Black" BorderBrush="Black" ResizeMode="NoResize" FontFamily="Arial Black" >
+        Title="Employee Directory" Height="370" Width="400" HorizontalAlignment="Center" Foreground="Black" BorderBrush="Black" ResizeMode="NoResize" FontFamily="Arial Black" WindowStartupLocation="CenterScreen" >
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0.252"/>
@@ -102,6 +102,6 @@
         </Button>
 
         <TextBlock Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="2" HorizontalAlignment="Right"
-                   Text="Created by Dave Poole, 2021" FontSize="12"/>
+                   Text="Created by Dave Poole, 2021" FontSize="12" FontFamily="Century"/>
     </Grid>
 </Window>
