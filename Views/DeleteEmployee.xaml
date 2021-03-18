@@ -29,17 +29,17 @@
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Impact"
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Century"
                    TextAlignment="Center" Grid.ColumnSpan="3" 
                    Margin="0 0 0 10" Foreground="#FFBBBBBB"
                    Text="Delete Employee" />
 
         <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3"
-                   Margin="0 5 0 5" Foreground="#FFA8A8A8" FontWeight="Normal" FontFamily="Bahnschrift"
+                   Margin="0 5 0 5" Foreground="#FFA8A8A8" FontWeight="Normal" FontFamily="Century"
                    Text="Select Employee to Delete" HorizontalAlignment="Center"/>
         
-        <ComboBox x:Name="EmployeeNames" Grid.Column="2" Width="300" Margin="0 10 0 0"
-                  HorizontalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="2"
+        <ComboBox x:Name="EmployeeNames" Grid.Column="1" Width="300" Margin="0 10 0 0"
+                  HorizontalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="3"
                   
                   ItemsSource="{Binding Employee_Directory_EditEmployee.employees}"
                   DisplayMemberPath="FullName" SelectedValuePath="FullName"
@@ -47,12 +47,22 @@
 
         </ComboBox>
 
-        <Button x:Name="DeleteButton" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Center"
-                Width="75" Height="30" 
-                FontFamily="Bahnschrift" Padding="2  1 2 1"
+        <Button x:Name="DeleteButton" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Right"
+                Width="75" Height="30" Margin="0 0 70 0"
+                FontFamily="Century" Padding="2  1 2 1"
                 BorderBrush="Black" Background="#FFC7C7C7" 
                 FontWeight="Bold" BorderThickness="2,2,2,2"
                 Content="Delete" Click="DeleteButton_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="Cancel" Content="Cancel" Grid.Column="1"  Grid.Row="4"
+                Margin="65 0 0 0" Width="80" Height="30"  Padding="2  1 2 1"
+                BorderBrush="Black" Background="#FFC7C7C7" 
+                FontWeight="Bold" BorderThickness="2,2,2,2" FontFamily="Century" >
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
