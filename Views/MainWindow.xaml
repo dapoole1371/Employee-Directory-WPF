@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Employee_Directory_WPF"
         mc:Ignorable="d" FontSize="18"
-        Title="Employee Directory" Height="360" Width="400" HorizontalAlignment="Center" Foreground="Black" >
+        Title="Employee Directory" Height="370" Width="400" HorizontalAlignment="Center" Foreground="Black" BorderBrush="Black" ResizeMode="NoResize" FontFamily="Arial Black" >
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0.252"/>
@@ -32,13 +32,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Impact"
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Century"
                    TextAlignment="Center" Grid.ColumnSpan="3" 
                    Margin="0 0 0 10" Foreground="#FFBBBBBB"
                    Text="Employee Directory"/>
 
         <Button x:Name="DisplayList" Content="Display Employee List" Grid.Column="2" Grid.Row="3"
-                FontFamily="Bahnschrift" Padding="2  1 2 1"  
+                FontFamily="Century" Padding="2  1 2 1"  
                 Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" 
                 Click="DisplayList_Click" BorderBrush="Black" Background="#FFC7C7C7" 
                 FontWeight="Bold" BorderThickness="2,2,2,2">
@@ -50,7 +50,7 @@
         </Button>
 
         <Button x:Name="NewEmployee" Content="Add a New Employee" Grid.Column="2" Grid.Row="4"
-                FontFamily="Bahnschrift" Padding="2  1 2 1"  
+                FontFamily="Century" Padding="2  1 2 1"  
                 Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" 
                  BorderBrush="Black" Background="#FFC7C7C7"
                 FontWeight="Bold" BorderThickness="2,2,2,2"
@@ -63,7 +63,7 @@
         </Button>
 
         <Button x:Name="EditEmployee" Content="Edit an Existing Employee" Grid.Column="2" Grid.Row="5"
-                FontFamily="Bahnschrift" Padding="2  1 2 1"  
+                FontFamily="Century" Padding="2  1 2 1"  
                 Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" 
                 BorderBrush="Black" Background="#FFC7C7C7"
                 FontWeight="Bold" BorderThickness="2,2,2,2" 
@@ -76,7 +76,7 @@
         </Button>
 
         <Button x:Name="DeleteEmployee" Content="Delete an Employee" Grid.Column="2" Grid.Row="6"
-                FontFamily="Bahnschrift" Padding="2  1 2 1"  
+                FontFamily="Century" Padding="2  1 2 1"  
                 Grid.ColumnSpan="2" HorizontalAlignment="Center" Margin="10" 
                 BorderBrush="Black" Background="#FFC7C7C7"
                 FontWeight="Bold" BorderThickness="2,2,2,2" 
@@ -89,7 +89,7 @@
         </Button>
 
         <Button x:Name="ExitApp" Content="Exit Application" Grid.Column="2" Grid.Row="7"
-                FontFamily="Bahnschrift" Padding="2  1 2 1"  
+                FontFamily="Century" Padding="2  1 2 1"  
                 Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="10" 
                 BorderBrush="Black" Background="#FFC7C7C7"
                 FontWeight="Bold" BorderThickness="2,2,2,2" 

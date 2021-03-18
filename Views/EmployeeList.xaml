@@ -27,9 +27,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Impact"
+        <TextBlock Grid.Column="1" Grid.Row="1" FontSize="36" FontFamily="Century"
                    Text="Employee Directory" TextAlignment="Center" Grid.ColumnSpan="3" 
-                   Margin="0 0 0 10" Foreground="#FFBBBBBB"/>
+                   Margin="0 0 0 10" Foreground="#FFBBBBBB" FontWeight="Bold"/>
 
         <ScrollViewer Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="3"
                       HorizontalAlignment="Center">
@@ -46,8 +46,8 @@
         </ScrollViewer>
         <Button Grid.Column="3" Grid.Row="3" Name="CloseButton" Content="Close Window" Width="130"
                 HorizontalAlignment="Right" Height="40" FontSize="18" BorderBrush="Black" Background="#FFC7C7C7"
-                FontFamily="Bahnschrift" Padding="2  1 2 1"
-                FontWeight="Bold" BorderThickness="2,2,2,2" Click="CloseButton_Click">
+                FontFamily="Century" Padding="2  1 2 1"
+                FontWeight="Normal" BorderThickness="2,2,2,2" Click="CloseButton_Click">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="10"/>
