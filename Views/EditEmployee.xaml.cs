@@ -32,6 +32,9 @@ namespace Employee_Directory_WPF.Views
         private void EmployeeNames_SelectionChanged(object sender, SelectionChangedEventArgs e)  //When a user selects a name from dropdown, the generic object from the dropdown is cast as an Employee object and then its values are saved into the temporary employee object.
         {
             employee = (Employee) EmployeeNames.SelectedItem;
+            FirstNameIn.Text = employee.FirstName;
+            LastNameIn.Text = employee.LastName;
+            JobTitleIn.Text = employee.JobTitle;
         }
 
         private void EditButton_Click(object sender, RoutedEventArgs e)  //When user clicks Edit button
